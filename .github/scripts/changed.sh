@@ -3,7 +3,6 @@
 # Usage: changed.sh <base-sha> (empty or all zeros means "run everything").
 set -euo pipefail
 base="${1:-}"
-out="${GITHUB_OUTPUT:-/dev/stdout}"
 
 if [[ -z "$base" || "$base" =~ ^0+$ ]] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
   files="__everything__"
@@ -16,8 +15,12 @@ hit() { # hit <extended-regex>
 }
 
 shared='^(packages/tokens/|supabase/|\.github/(scripts/|workflows/ci\.yml))'
-{
-  echo "mobile=$(hit "^apps/mobile/|$shared|^\.github/workflows/mobile\.yml$")"
-  echo "admin=$(hit "^apps/admin/|^package(-lock)?\.json$|$shared|^\.github/workflows/admin\.yml$")"
-  echo "supabase=$(hit "^supabase/|^scripts/gen-types\.mjs$|^\.github/(scripts/|workflows/(ci|supabase)\.yml)")"
-} >> "$out"
+result="mobile=$(hit "^apps/mobile/|$shared|^\.github/workflows/mobile\.yml$")
+admin=$(hit "^apps/admin/|^package(-lock)?\.json$|$shared|^\.github/workflows/admin\.yml$")
+supabase=$(hit "^supabase/|^scripts/gen-types\.mjs$|^\.github/(scripts/|workflows/(ci|supabase)\.yml)")"
+
+if [[ -n "${GITHUB_OUTPUT:-}" ]]; then
+  printf '%s\n' "$result" >> "$GITHUB_OUTPUT"
+else
+  printf '%s\n' "$result"
+fi
