@@ -1,0 +1,1482 @@
+[
+  {
+    "id": "REPO-01",
+    "title": "Per-app CI, path-filtered",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "REPO-02",
+    "title": "Generated TS and Dart types from schema",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "REPO-03",
+    "title": "Schema changes only via migrations",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "REPO-04",
+    "title": "Root README with run commands",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "OPS-01",
+    "title": "Three environments, .env.example per app",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "OPS-02",
+    "title": "Keys inventory with mocks until supplied",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-03",
+    "title": "Platform crypto only, anon key only in build",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-07",
+    "title": "Pinned deps, pub outdated, OSV scan in CI",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-18",
+    "title": "Secret stores, gitleaks in CI",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ENG-01",
+    "title": "Effective Dart, very_good_analysis, zero warnings",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ENG-02",
+    "title": "Feature-first folders, repositories behind interfaces",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ENG-03",
+    "title": "Riverpod codegen, freezed, typed results",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ENG-07",
+    "title": "TypeScript strict, ESLint, Prettier, Server Components, zod",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ENG-08",
+    "title": "Edge Functions in Deno with tests, RLS reviewed per migration",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ENG-09",
+    "title": "Conventional Commits with IDs, CI runs all checks",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ENG-10",
+    "title": "Security follows section 19",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "WEBD-03",
+    "title": "Shared tokens.json generates Dart and Tailwind",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "DS-01",
+    "title": "Design tokens",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "DS-03",
+    "title": "Contrast meets WCAG AA",
+    "phase": "0",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "DS-02",
+    "title": "Two themes",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "DS-04",
+    "title": "3D icons via AppIcon",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "DS-05",
+    "title": "Reduced motion",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "NAV-01",
+    "title": "Custom tab bar",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ENG-04",
+    "title": "Platform guidelines for system behaviour",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ENG-05",
+    "title": "WCAG 2.2 AA, 44 pt targets, labels",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ENG-06",
+    "title": "Performance targets",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-01",
+    "title": "Discretion is the luxury",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-02",
+    "title": "Earned, never bought",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-03",
+    "title": "Honest scarcity",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-04",
+    "title": "Recognition weighted by knowledge",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-05",
+    "title": "Ritual over habit loops",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-06",
+    "title": "Ceremony at real milestones only",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-07",
+    "title": "The object is the hero",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-08",
+    "title": "Language of the house",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-09",
+    "title": "Safety you can feel",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-15",
+    "title": "Anti-patterns fail review",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-16",
+    "title": "Per-screen principle note",
+    "phase": "1",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAULT-01",
+    "title": "Add bottle",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAULT-02",
+    "title": "Shelf views",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAULT-03",
+    "title": "Biometric lock",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAULT-04",
+    "title": "Bottle detail",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAULT-05",
+    "title": "Cost per wear",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAULT-06",
+    "title": "Empty forecast",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAULT-07",
+    "title": "Preservation mode",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAULT-08",
+    "title": "Samples",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAULT-09",
+    "title": "Insights",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "NAV-02",
+    "title": "Transitions",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SEC-01",
+    "title": "No location",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SYNC-02",
+    "title": "Drift source of truth, merge rules",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SYNC-03",
+    "title": "Local data uploads on sign-up",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "CAT-01",
+    "title": "Seeded catalogue of 300+",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "CAT-02",
+    "title": "Member-submitted fragrances",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "UX-01",
+    "title": "Empty, loading, error states",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "UX-02",
+    "title": "Screen reader labels, large text",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "UX-03",
+    "title": "Currency, locale, ARB strings",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-01",
+    "title": "Keychain and SQLCipher",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-02",
+    "title": "Backup exclusion, app switcher blur",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-04",
+    "title": "Biometric tied to Keychain item, 5 min relock",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-10",
+    "title": "Signature: the Vault opening",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-13",
+    "title": "Signature: the catalogue entry",
+    "phase": "2",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "TODAY-01",
+    "title": "Suggestions",
+    "phase": "3",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "TODAY-02",
+    "title": "Occasion and seeing tags",
+    "phase": "3",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "TODAY-03",
+    "title": "Don't-repeat warning",
+    "phase": "3",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "TODAY-04",
+    "title": "Notifications",
+    "phase": "3",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "TODAY-05",
+    "title": "Compliment log",
+    "phase": "3",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ONB-01",
+    "title": "Invite gate",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ONB-02",
+    "title": "Waitlist",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ONB-03",
+    "title": "Sign-in",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAULT-10",
+    "title": "Free limit",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PAY-01",
+    "title": "Subscriptions",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PAY-02",
+    "title": "Founding Patron",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SEC-02",
+    "title": "Row Level Security",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "MEM-01",
+    "title": "Four access states",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "MEM-04",
+    "title": "Invite allowances",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "DATA-01",
+    "title": "Missing tables",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "DATA-02",
+    "title": "Member columns",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "DATA-03",
+    "title": "Foreign key delete rules",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SYNC-01",
+    "title": "Private buckets, signed URLs, thumbnails",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-05",
+    "title": "TLS, key pinning",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-09",
+    "title": "RLS deny-by-default with role tests",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-10",
+    "title": "Staff 2FA, session expiry, lockout",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-11",
+    "title": "Explicit field lists, private fields",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-12",
+    "title": "Rate limits, upload validation",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-13",
+    "title": "Service role server-only",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-14",
+    "title": "Transactional business flows, webhook signature",
+    "phase": "4",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SOC-01",
+    "title": "Verification",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SOC-02",
+    "title": "Rarity tiers",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SOC-03",
+    "title": "Ranks",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SOC-04",
+    "title": "Rank-up ceremony",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SOC-05",
+    "title": "Sealed profile",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SOC-09",
+    "title": "Holder counts",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SOC-10",
+    "title": "Rarity percentile",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "MEM-02",
+    "title": "Founding Curator flag",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "MEM-03",
+    "title": "Rank thresholds and points",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "CAT-03",
+    "title": "Batch code rules",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VER-01",
+    "title": "Staff review until 20 Curators",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VER-02",
+    "title": "Peer review after 20 Curators",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VER-03",
+    "title": "72 hour target",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VER-04",
+    "title": "Reviewers never see handle",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAL-01",
+    "title": "Bottle value rules",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAL-02",
+    "title": "Collection value behind biometrics",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "VAL-03",
+    "title": "Sale prices in aggregate only",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-11",
+    "title": "Signature: the seal",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-12",
+    "title": "Signature: the veiled profile",
+    "phase": "5",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SOC-07",
+    "title": "Recognition",
+    "phase": "6",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SOC-08",
+    "title": "Rankings hall",
+    "phase": "6",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "WANT-01",
+    "title": "Wanted list",
+    "phase": "6",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SEC-03",
+    "title": "Reporting and blocking",
+    "phase": "6",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "MSG-01",
+    "title": "Replies only",
+    "phase": "6",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "MSG-02",
+    "title": "Request then accept",
+    "phase": "6",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "MSG-03",
+    "title": "Text only, pattern filter",
+    "phase": "6",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "MSG-04",
+    "title": "Rate limit",
+    "phase": "6",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "NOTIF-01",
+    "title": "Notification types",
+    "phase": "6",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "NOTIF-02",
+    "title": "Per-type switches, quiet hours",
+    "phase": "6",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "NOTIF-03",
+    "title": "Max 4 pushes a day",
+    "phase": "6",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PSY-14",
+    "title": "Signature: the hall",
+    "phase": "6",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "EXH-01",
+    "title": "Exhibitions",
+    "phase": "7",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SOC-06",
+    "title": "Viewing grants",
+    "phase": "7",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PROV-01",
+    "title": "Transfer",
+    "phase": "7",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PROV-02",
+    "title": "NFC caps",
+    "phase": "7",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "WEB-02",
+    "title": "Universal and App Links",
+    "phase": "7",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "WEB-03",
+    "title": "App Clip or documented deferral",
+    "phase": "7",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "WEB-04",
+    "title": "Public provenance card fields",
+    "phase": "7",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "CIRC-01",
+    "title": "Blind Circles",
+    "phase": "8",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ME-01",
+    "title": "Wallet card",
+    "phase": "9",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ME-02",
+    "title": "Year in Scent",
+    "phase": "9",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ME-04",
+    "title": "Settings",
+    "phase": "9",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "WID-01",
+    "title": "Widgets",
+    "phase": "9",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "INV-01",
+    "title": "Invite counts by rank",
+    "phase": "11",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "INV-02",
+    "title": "Sponsor link hidden by default",
+    "phase": "11",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "INV-03",
+    "title": "Application and waitlist approval",
+    "phase": "11",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "INV-04",
+    "title": "Fake verification penalty",
+    "phase": "11",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ME-03",
+    "title": "Invites screen",
+    "phase": "11",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PHO-01",
+    "title": "In-app camera",
+    "phase": "12",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PHO-02",
+    "title": "On-device background removal and plinth",
+    "phase": "12",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PHO-03",
+    "title": "Strip EXIF, optional blur",
+    "phase": "12",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PHO-04",
+    "title": "Photos across surfaces",
+    "phase": "12",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "PHO-05",
+    "title": "Member photos only",
+    "phase": "12",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SHR-01",
+    "title": "Hallmark on exports",
+    "phase": "12",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SHR-02",
+    "title": "One bottle at a time, no value or location",
+    "phase": "12",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SHR-03",
+    "title": "Waitlist or App Clip link",
+    "phase": "12",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SHR-04",
+    "title": "Square, story, print formats",
+    "phase": "12",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "REQ-01",
+    "title": "Requests board",
+    "phase": "13",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "REQ-02",
+    "title": "Rank-weighted votes",
+    "phase": "13",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "REQ-03",
+    "title": "Request statuses",
+    "phase": "13",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "REQ-04",
+    "title": "Shipped notifications",
+    "phase": "13",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "REQ-05",
+    "title": "Duplicate merge",
+    "phase": "13",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "REQ-06",
+    "title": "Free users read only",
+    "phase": "13",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "REQ-07",
+    "title": "Tables with RLS",
+    "phase": "13",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ADM-01",
+    "title": "Staff roles enforced by RLS",
+    "phase": "14",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ADM-09",
+    "title": "Audit log",
+    "phase": "14",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ADM-10",
+    "title": "Nocturne tokens, functional layout",
+    "phase": "14",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "WEB-01",
+    "title": "Public landing, waitlist, legal, provenance card",
+    "phase": "14",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "OPS-04",
+    "title": "Owner creation script",
+    "phase": "14",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-15",
+    "title": "Injection, XSS, CSP, CSRF",
+    "phase": "14",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-16",
+    "title": "No user-supplied URL fetches, schema validation",
+    "phase": "14",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-17",
+    "title": "Security logging and alerts",
+    "phase": "14",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "WEBD-01",
+    "title": "Public pages as catalogue opening",
+    "phase": "14",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "WEBD-02",
+    "title": "Dense admin with shortcuts",
+    "phase": "14",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "WEBD-04",
+    "title": "Self-hosted fonts, Lighthouse 90+",
+    "phase": "14",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ADM-02",
+    "title": "Waitlist queue",
+    "phase": "15",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ADM-03",
+    "title": "Member management",
+    "phase": "15",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ADM-04",
+    "title": "Sponsor tree",
+    "phase": "15",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ADM-05",
+    "title": "Verification disputes",
+    "phase": "15",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ADM-06",
+    "title": "Curator outreach tracker",
+    "phase": "15",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ADM-07",
+    "title": "Feature request admin",
+    "phase": "15",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "ADM-08",
+    "title": "Overview page",
+    "phase": "15",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "JOB-01",
+    "title": "Rank scores and percentiles",
+    "phase": "16",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "JOB-02",
+    "title": "Expire viewing grants",
+    "phase": "16",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "JOB-03",
+    "title": "Wanted alerts",
+    "phase": "16",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "JOB-04",
+    "title": "Holder counts and rarity stats",
+    "phase": "16",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "JOB-05",
+    "title": "Invite top-ups",
+    "phase": "16",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "JOB-06",
+    "title": "Weekly owner email",
+    "phase": "16",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "JOB-07",
+    "title": "Cleanup",
+    "phase": "16",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "OPS-03",
+    "title": "Sentry and events table",
+    "phase": "16",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "STORE-01",
+    "title": "Reviewer demo account",
+    "phase": "Before submission",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "STORE-02",
+    "title": "UGC rules",
+    "phase": "Before submission",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "STORE-03",
+    "title": "Sign in with Apple parity",
+    "phase": "Before submission",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "STORE-04",
+    "title": "Deletion, privacy and terms links",
+    "phase": "Before submission",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "STORE-05",
+    "title": "Store listing assets",
+    "phase": "Before submission",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-06",
+    "title": "Deep link validation, no WebViews",
+    "phase": "Before submission",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-08",
+    "title": "Obfuscation, jailbreak detection, attestation",
+    "phase": "Before submission",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-19",
+    "title": "MASTG pass recorded",
+    "phase": "Before submission",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-20",
+    "title": "Threat model",
+    "phase": "Before submission",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  },
+  {
+    "id": "SECX-21",
+    "title": "security.txt",
+    "phase": "Before submission",
+    "status": "Not started",
+    "test": "",
+    "commit": ""
+  }
+]

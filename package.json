@@ -1,0 +1,22 @@
+{
+  "name": "provenance-society",
+  "private": true,
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "apps/admin"
+  ],
+  "scripts": {
+    "tokens": "node packages/tokens/build.mjs",
+    "tokens:check": "node packages/tokens/build.mjs --check",
+    "test:tokens": "node --test packages/tokens/*.test.mjs",
+    "lint:design": "cd apps/mobile && dart run tool/design_lint.dart",
+    "types": "node scripts/gen-types.mjs",
+    "test:repo": "node --test scripts/*.test.mjs",
+    "progress": "node scripts/progress.mjs",
+    "progress:check": "node scripts/progress.mjs --check",
+    "check": "npm run tokens:check && npm run test:tokens && npm run test:repo && npm run progress:check"
+  }
+}

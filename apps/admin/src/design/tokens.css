@@ -1,0 +1,73 @@
+/* GENERATED FILE. Edit packages/tokens/tokens.json and run `npm run tokens`. */
+:root {
+  --ps-ink: #0F0E0D;
+  --ps-smoke: #1A1817;
+  --ps-lacquer: #2A1416;
+  --ps-vellum: #ECE4D6;
+  --ps-ash: #9A9186;
+  --ps-verdigris: #6E9A8C;
+  --ps-oxblood: #7A2630;
+  --ps-resin: #B9864F;
+  --ps-onAccent: #F2ECE1;
+  --ps-hairline: rgb(236 228 214 / 0.1);
+}
+
+[data-theme="atelier"] {
+  --ps-ink: #F2ECE1;
+  --ps-smoke: #E8E0D1;
+  --ps-lacquer: #E3D3CC;
+  --ps-vellum: #0F0E0D;
+  --ps-ash: #5C554C;
+  --ps-verdigris: #3D6A5C;
+  --ps-oxblood: #6E1F29;
+  --ps-resin: #855A26;
+  --ps-onAccent: #F2ECE1;
+  --ps-hairline: rgb(15 14 13 / 0.12);
+}
+
+@theme inline {
+  --color-ink: var(--ps-ink);
+  --color-smoke: var(--ps-smoke);
+  --color-lacquer: var(--ps-lacquer);
+  --color-vellum: var(--ps-vellum);
+  --color-ash: var(--ps-ash);
+  --color-verdigris: var(--ps-verdigris);
+  --color-oxblood: var(--ps-oxblood);
+  --color-resin: var(--ps-resin);
+  --color-onAccent: var(--ps-onAccent);
+  --color-hairline: var(--ps-hairline);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-text: "Inter Tight", system-ui, sans-serif;
+  --ease-settle: cubic-bezier(0.2, 0, 0, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --duration-ui: 280ms;
+  --duration-hero: 520ms;
+  --duration-ceremony: 900ms;
+  --text-displayXL: 2.75rem;
+  --text-displayXL--line-height: 1.05;
+  --text-displayXL--letter-spacing: -0.03em;
+  --text-displayXL--font-weight: 400;
+  --text-displayL: 2rem;
+  --text-displayL--line-height: 1.1;
+  --text-displayL--letter-spacing: -0.02em;
+  --text-displayL--font-weight: 400;
+  --text-titleM: 1.375rem;
+  --text-titleM--line-height: 1.2;
+  --text-titleM--letter-spacing: -0.01em;
+  --text-titleM--font-weight: 400;
+  --text-bodyM: 1rem;
+  --text-bodyM--line-height: 1.5;
+  --text-bodyM--letter-spacing: 0em;
+  --text-bodyM--font-weight: 400;
+  --text-labelS: 0.6875rem;
+  --text-labelS--line-height: 1.3;
+  --text-labelS--letter-spacing: 0.12em;
+  --text-labelS--font-weight: 500;
+  --text-numeralL: 1.75rem;
+  --text-numeralL--line-height: 1.1;
+  --text-numeralL--letter-spacing: -0.01em;
+  --text-numeralL--font-weight: 300;
+  --radius-none: 0px;
+  --radius-hair: 2px;
+  --radius-panel: 6px;
+}

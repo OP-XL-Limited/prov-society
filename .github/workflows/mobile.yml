@@ -1,0 +1,40 @@
+name: mobile
+on:
+  push:
+    branches: [main]
+    paths: [apps/mobile/**, packages/tokens/**, supabase/**, .github/workflows/mobile.yml]
+  pull_request:
+    paths: [apps/mobile/**, packages/tokens/**, supabase/**, .github/workflows/mobile.yml]
+permissions:
+  contents: read
+concurrency:
+  group: mobile-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: apps/mobile
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          channel: stable
+          flutter-version: 3.44.4
+          cache: true
+      - name: Tokens are fresh (WEBD-03)
+        working-directory: .
+        run: node packages/tokens/build.mjs --check
+      - run: flutter pub get --enforce-lockfile
+      - run: flutter gen-l10n
+      - name: Outdated report (SECX-07)
+        run: flutter pub outdated
+      - run: dart format --output=none --set-exit-if-changed lib test tool
+      - run: flutter analyze --fatal-infos
+      - name: Design lint (DS-01)
+        run: dart run tool/design_lint.dart
+      - run: flutter test

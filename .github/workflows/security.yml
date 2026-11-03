@@ -1,0 +1,36 @@
+name: security
+# Secret scan and dependency vulnerability scan on every push and pull request (SECX-07, SECX-18).
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: security-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  gitleaks:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - run: .github/scripts/install-security-tools.sh
+      - name: Scan full history for secrets
+        run: gitleaks git --redact --verbose --exit-code 1 .
+  osv:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: .github/scripts/install-security-tools.sh
+      - name: Scan lockfiles
+        run: |
+          set +e
+          osv-scanner scan source --recursive --format json --output-file osv.json .
+          code=$?
+          set -e
+          # Exit 1 means vulnerabilities were found; the gate below decides on severity.
+          if [ "$code" -gt 1 ]; then echo "osv-scanner failed with $code"; exit "$code"; fi
+          node .github/scripts/osv-gate.mjs osv.json

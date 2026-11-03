@@ -1,0 +1,4 @@
+.next
+node_modules
+src/design/tokens.css
+src/lib/database.types.ts

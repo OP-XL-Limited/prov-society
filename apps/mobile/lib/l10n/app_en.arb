@@ -1,0 +1,7 @@
+{
+  "@@locale": "en",
+  "appName": "Provenance Society",
+  "@appName": { "description": "Name of the app, shown in the OS app switcher." },
+  "bootTagline": "Membership by invitation.",
+  "@bootTagline": { "description": "Quiet line shown on the first launch screen." }
+}

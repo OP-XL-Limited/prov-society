@@ -1,7 +1,45 @@
+# Secrets (OPS-01, SECX-18). Only .env.example files are committed.
 .env
 .env.*
 !.env.example
+*.p12
+*.p8
+*.pem
+*.jks
+*.keystore
+key.properties
+google-services.json
+GoogleService-Info.plist
+service-account*.json
+
+# OS and editors
+.DS_Store
 .obsidian/
+.idea/
+*.iml
+.vscode/
+
+# Node and Next.js
 node_modules/
+.next/
+out/
+.vercel/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Flutter and Dart
 build/
 .dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.symbols
+*.obfuscation.map
+split-debug-info/
+
+# Supabase local
+supabase/.branches
+supabase/.temp
+
+# Claude Code local settings
+.claude/settings.local.json

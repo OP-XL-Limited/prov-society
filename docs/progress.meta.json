@@ -1,0 +1,32 @@
+{
+  "commands": [
+    ["Mobile: install and run (mock mode)", "cd apps/mobile && flutter pub get && flutter gen-l10n && flutter run --dart-define-from-file=.env"],
+    ["Mobile: full check", "cd apps/mobile && dart format --set-exit-if-changed lib test tool && flutter analyze --fatal-infos && dart run tool/design_lint.dart && flutter test"],
+    ["Admin: dev server", "npm install && npm run dev --workspace provenance-admin"],
+    ["Admin: full check", "npm run lint --workspace provenance-admin && npm run typecheck --workspace provenance-admin && npm test --workspace provenance-admin"],
+    ["Tokens: regenerate and verify", "npm run tokens && npm run tokens:check && npm run test:tokens"],
+    ["Local Supabase", "supabase start && supabase test db && supabase db reset"],
+    ["Generated types", "npm run types"],
+    ["Repo checks and this report", "npm run test:repo && npm run progress"]
+  ],
+  "mocked": [],
+  "realDevice": [
+    "Haptics (light, medium, heavy) on a physical iPhone and Android phone",
+    "Face ID and Android biometrics, including Keychain-bound unlock (VAULT-03, SECX-04)",
+    "NFC cap read and write (PROV-02)",
+    "Camera capture, barcode scan and batch-code capture (SOC-01, PHO-01)",
+    "Apple Wallet and Google Wallet passes (ME-01)",
+    "iOS and Android home and lock screen widgets (WID-01)",
+    "Push notifications through APNs and FCM (TODAY-04, NOTIF-01)",
+    "App Attest and Play Integrity (SECX-08)",
+    "Jailbreak and root detection (SECX-08)",
+    "Sandbox purchases through RevenueCat (PAY-01, PAY-02)"
+  ],
+  "blockers": [],
+  "notes": [
+    "freezed is pinned to 4.0.0-dev.3 because riverpod_generator 4.0.9 requires it; revisit when freezed 4 is stable.",
+    "riverpod_lint is not installed: it conflicts with freezed_annotation 3 in the current resolver. very_good_analysis covers the lint requirement.",
+    "Android licences are not accepted on this machine (flutter doctor --android-licenses) and Chrome is not installed. Both are needed before Android emulator runs and Lighthouse checks."
+  ],
+  "psy16": []
+}

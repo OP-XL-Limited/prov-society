@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/inter-tight";
+@import "../design/tokens.css";
+
+body {
+  background: var(--color-ink);
+  color: var(--color-vellum);
+  font-family: var(--font-text);
+}

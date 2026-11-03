@@ -1,0 +1,30 @@
+name: supabase
+on:
+  push:
+    branches: [main]
+    paths: [supabase/**, .github/workflows/supabase.yml]
+  pull_request:
+    paths: [supabase/**, .github/workflows/supabase.yml]
+permissions:
+  contents: read
+concurrency:
+  group: supabase-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  database:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: supabase/setup-cli@689adcfb80d947100a1eab127289b97d1fb07b13 # v3.2.0
+        with:
+          version: 3.0.0
+      - name: Start local stack, apply migrations and seed
+        run: supabase start --exclude studio,imgproxy,inbucket,realtime,edge-runtime,logflare,vector
+      - name: Row level security tests (SECX-09)
+        run: supabase test db
+      - name: Migrations replay cleanly from scratch (REPO-03)
+        run: supabase db reset
+      - name: Generated types are fresh (REPO-02)
+        run: |
+          node scripts/gen-types.mjs
+          git diff --exit-code -- apps/admin/src/lib/database.types.ts apps/mobile/lib/data/remote/models.g.dart
