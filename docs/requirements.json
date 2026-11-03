@@ -3,153 +3,153 @@
     "id": "REPO-01",
     "title": "Per-app CI, path-filtered",
     "phase": "0",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "REPO-01 each app has its own path-filtered CI job",
+    "commit": "07c53a0"
   },
   {
     "id": "REPO-02",
     "title": "Generated TS and Dart types from schema",
     "phase": "0",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "REPO-02 type generators exist and outputs are committed",
+    "commit": "07c53a0"
   },
   {
     "id": "REPO-03",
     "title": "Schema changes only via migrations",
     "phase": "0",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "REPO-03 migrations exist and a CI job replays them from scratch",
+    "commit": "07c53a0"
   },
   {
     "id": "REPO-04",
     "title": "Root README with run commands",
     "phase": "0",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "REPO-04 README lists commands for each app and the local Supabase stack",
+    "commit": "07c53a0"
   },
   {
     "id": "OPS-01",
     "title": "Three environments, .env.example per app",
     "phase": "0",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "OPS-01 every app ships .env.example and real env files are git-ignored",
+    "commit": "07c53a0"
   },
   {
     "id": "OPS-02",
     "title": "Keys inventory with mocks until supplied",
     "phase": "0",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "OPS-02 the key inventory is documented with mocks until supplied",
+    "commit": "07c53a0"
   },
   {
     "id": "SECX-03",
     "title": "Platform crypto only, anon key only in build",
     "phase": "0",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "SECX-03 the mobile build env holds no server secrets",
+    "commit": "07c53a0"
   },
   {
     "id": "SECX-07",
     "title": "Pinned deps, pub outdated, OSV scan in CI",
     "phase": "0",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "SECX-07 workflows pin actions to commit SHAs and scan dependencies with OSV",
+    "commit": "07c53a0"
   },
   {
     "id": "SECX-18",
     "title": "Secret stores, gitleaks in CI",
     "phase": "0",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "SECX-18 CI runs gitleaks over full history",
+    "commit": "07c53a0"
   },
   {
     "id": "ENG-01",
     "title": "Effective Dart, very_good_analysis, zero warnings",
     "phase": "0",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "flutter analyze --fatal-infos",
+    "commit": "07c53a0"
   },
   {
     "id": "ENG-02",
     "title": "Feature-first folders, repositories behind interfaces",
     "phase": "0",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "07c53a0"
   },
   {
     "id": "ENG-03",
     "title": "Riverpod codegen, freezed, typed results",
     "phase": "0",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "07c53a0"
   },
   {
     "id": "ENG-07",
     "title": "TypeScript strict, ESLint, Prettier, Server Components, zod",
     "phase": "0",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "07c53a0"
   },
   {
     "id": "ENG-08",
     "title": "Edge Functions in Deno with tests, RLS reviewed per migration",
     "phase": "0",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "07c53a0"
   },
   {
     "id": "ENG-09",
     "title": "Conventional Commits with IDs, CI runs all checks",
     "phase": "0",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "07c53a0"
   },
   {
     "id": "ENG-10",
     "title": "Security follows section 19",
     "phase": "0",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "07c53a0"
   },
   {
     "id": "WEBD-03",
     "title": "Shared tokens.json generates Dart and Tailwind",
     "phase": "0",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "WEBD-03 generated Dart and Tailwind tokens match tokens.json",
+    "commit": "07c53a0"
   },
   {
     "id": "DS-01",
     "title": "Design tokens",
     "phase": "0",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "DS-01 flags raw Color( outside tokens",
+    "commit": "07c53a0"
   },
   {
     "id": "DS-03",
     "title": "Contrast meets WCAG AA",
     "phase": "0",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "07c53a0"
   },
   {
     "id": "DS-02",

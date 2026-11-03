@@ -1,13 +1,37 @@
 {
   "commands": [
-    ["Mobile: install and run (mock mode)", "cd apps/mobile && flutter pub get && flutter gen-l10n && flutter run --dart-define-from-file=.env"],
-    ["Mobile: full check", "cd apps/mobile && dart format --set-exit-if-changed lib test tool && flutter analyze --fatal-infos && dart run tool/design_lint.dart && flutter test"],
-    ["Admin: dev server", "npm install && npm run dev --workspace provenance-admin"],
-    ["Admin: full check", "npm run lint --workspace provenance-admin && npm run typecheck --workspace provenance-admin && npm test --workspace provenance-admin"],
-    ["Tokens: regenerate and verify", "npm run tokens && npm run tokens:check && npm run test:tokens"],
-    ["Local Supabase", "supabase start && supabase test db && supabase db reset"],
-    ["Generated types", "npm run types"],
-    ["Repo checks and this report", "npm run test:repo && npm run progress"]
+    [
+      "Mobile: install and run (mock mode)",
+      "cd apps/mobile && flutter pub get && flutter gen-l10n && flutter run --dart-define-from-file=.env"
+    ],
+    [
+      "Mobile: full check",
+      "cd apps/mobile && dart format --set-exit-if-changed lib test tool && flutter analyze --fatal-infos && dart run tool/design_lint.dart && flutter test"
+    ],
+    [
+      "Admin: dev server",
+      "npm install && npm run dev --workspace provenance-admin"
+    ],
+    [
+      "Admin: full check",
+      "npm run lint --workspace provenance-admin && npm run typecheck --workspace provenance-admin && npm test --workspace provenance-admin"
+    ],
+    [
+      "Tokens: regenerate and verify",
+      "npm run tokens && npm run tokens:check && npm run test:tokens"
+    ],
+    [
+      "Local Supabase",
+      "supabase start && supabase test db && supabase db reset"
+    ],
+    [
+      "Generated types",
+      "npm run types"
+    ],
+    [
+      "Repo checks and this report",
+      "npm run test:repo && npm run progress"
+    ]
   ],
   "mocked": [],
   "realDevice": [
@@ -26,7 +50,12 @@
   "notes": [
     "freezed is pinned to 4.0.0-dev.3 because riverpod_generator 4.0.9 requires it; revisit when freezed 4 is stable.",
     "riverpod_lint is not installed: it conflicts with freezed_annotation 3 in the current resolver. very_good_analysis covers the lint requirement.",
-    "Android licences are not accepted on this machine (flutter doctor --android-licenses) and Chrome is not installed. Both are needed before Android emulator runs and Lighthouse checks."
+    "Android licences are not accepted on this machine (flutter doctor --android-licenses) and Chrome is not installed. Both are needed before Android emulator runs and Lighthouse checks.",
+    "Fraunces and Inter Tight are not bundled yet, so text falls back to the system font. Both are open licence (OFL); bundling is phase 1.",
+    "iOS deployment target raised from 13.0 to 16.0 because Xcode 27 rejects targets below 15.0. flutter build ios --simulator fails here (engine framework lacks x86_64); use flutter run -d <simulator>.",
+    "DS-03 is Partial: token pairs pass AA in both themes; screens are re-checked once they exist.",
+    "ENG-02, 03, 07, 08, 09 are Partial: scaffold and CI exist; repositories, Riverpod features, Server Actions, Edge Function tests and goldens arrive with later phases.",
+    "Phase 0 screenshot: screenshots/0/boot-nocturne.png (Atelier and large-text captures start in phase 1, when there is a UI to switch)."
   ],
   "psy16": []
 }
