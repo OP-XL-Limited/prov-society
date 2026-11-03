@@ -1,15 +1,8 @@
 name: supabase
 on:
-  push:
-    branches: [main]
-    paths: [supabase/**, .github/workflows/supabase.yml]
-  pull_request:
-    paths: [supabase/**, .github/workflows/supabase.yml]
+  workflow_call:
 permissions:
   contents: read
-concurrency:
-  group: supabase-${{ github.ref }}
-  cancel-in-progress: true
 jobs:
   database:
     runs-on: ubuntu-24.04
