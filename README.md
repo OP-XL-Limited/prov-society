@@ -81,3 +81,9 @@ Schema changes are made only by adding files to `supabase/migrations/`, never in
 ## Progress report
 
 Statuses live in `docs/requirements.json` and `docs/progress.meta.json`. Run `npm run progress` to render `docs/PROGRESS.md`.
+
+## Continuous integration and branches
+
+`main` is protected: work happens on a branch per phase (`phase-1`, `phase-2`, ...), goes through a pull request and is squash-merged once CI is green.
+
+`.github/workflows/ci.yml` is the single entrypoint. It runs `security` and `repo` on every change, and `mobile`, `admin` and `supabase` only when their folders (or `packages/tokens/`, `supabase/`) change. The `ci-ok` job always runs and passes only if every workflow that ran passed; skipped workflows count as passing. `ci-ok` is the one required status check.

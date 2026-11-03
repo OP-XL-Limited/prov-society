@@ -1,15 +1,8 @@
 name: admin
 on:
-  push:
-    branches: [main]
-    paths: [apps/admin/**, packages/tokens/**, supabase/**, package.json, package-lock.json, .github/workflows/admin.yml]
-  pull_request:
-    paths: [apps/admin/**, packages/tokens/**, supabase/**, package.json, package-lock.json, .github/workflows/admin.yml]
+  workflow_call:
 permissions:
   contents: read
-concurrency:
-  group: admin-${{ github.ref }}
-  cancel-in-progress: true
 jobs:
   verify:
     runs-on: ubuntu-24.04

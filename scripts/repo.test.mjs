@@ -10,13 +10,66 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const read = (rel) => readFileSync(join(root, rel), "utf8");
 const workflows = readdirSync(join(root, ".github/workflows")).map((f) => ({ f, text: read(`.github/workflows/${f}`) }));
 
-test("REPO-01 each app has its own path-filtered CI job", () => {
-  for (const [file, folder] of [["mobile.yml", "apps/mobile/**"], ["admin.yml", "apps/admin/**"]]) {
-    const text = read(`.github/workflows/${file}`);
-    assert.match(text, new RegExp(folder.replace("*", "\\*")), `${file} filters on ${folder}`);
-    assert.match(text, /supabase\/\*\*/, `${file} also runs when supabase/ changes`);
+function changedFlags(paths) {
+  const fs = process.getBuiltinModule("node:fs");
+  const os = process.getBuiltinModule("node:os");
+  const dir = fs.mkdtempSync(join(os.tmpdir(), "chg-"));
+  const git = (...a) => execFileSync("git", a, { cwd: dir, encoding: "utf8" }).trim();
+  git("init", "-q");
+  git("config", "user.email", "t@example.com");
+  git("config", "user.name", "t");
+  fs.writeFileSync(join(dir, "seed.txt"), "x");
+  git("add", "-A");
+  git("commit", "-q", "-m", "base");
+  const base = git("rev-parse", "HEAD");
+  for (const p of paths) {
+    fs.mkdirSync(dirname(join(dir, p)), { recursive: true });
+    fs.writeFileSync(join(dir, p), "y");
   }
-  assert.ok(existsSync(join(root, ".github/workflows/supabase.yml")));
+  git("add", "-A");
+  git("commit", "-q", "-m", "change");
+  const out = execFileSync("bash", [join(root, ".github/scripts/changed.sh"), base], { cwd: dir, encoding: "utf8", env: { ...process.env, GITHUB_OUTPUT: "" } });
+  return Object.fromEntries(out.trim().split("\n").map((l) => l.split("=")));
+}
+
+test("REPO-01 each app's CI runs only when its folder or supabase/ changes", () => {
+  assert.deepEqual(changedFlags(["apps/mobile/lib/a.dart"]), { mobile: "true", admin: "false", supabase: "false" });
+  assert.deepEqual(changedFlags(["apps/admin/src/a.ts"]), { mobile: "false", admin: "true", supabase: "false" });
+  assert.deepEqual(changedFlags(["docs/PROGRESS.md"]), { mobile: "false", admin: "false", supabase: "false" });
+  assert.deepEqual(changedFlags(["supabase/migrations/x.sql"]), { mobile: "true", admin: "true", supabase: "true" });
+  assert.equal(changedFlags(["packages/tokens/tokens.json"]).mobile, "true");
+  assert.equal(changedFlags(["package-lock.json"]).admin, "true");
+});
+
+test("REPO-01 a missing or zero base runs every app workflow", () => {
+  const out = execFileSync("bash", [join(root, ".github/scripts/changed.sh"), "0000000000000000000000000000000000000000"], { encoding: "utf8", env: { ...process.env, GITHUB_OUTPUT: "" } });
+  assert.match(out, /mobile=true[\s\S]*admin=true[\s\S]*supabase=true/);
+});
+
+test("REPO-01 ci-ok always runs on every pull request and push and gates all workflows", () => {
+  const ci = read(".github/workflows/ci.yml");
+  assert.match(ci, /pull_request:/);
+  assert.match(ci, /push:\s*\n\s*branches: \[main\]/);
+  assert.match(ci, /ci-ok:\s*\n\s*name: ci-ok\s*\n\s*if: always\(\)/);
+  assert.match(ci, /needs: \[changes, security, repo, supabase, mobile, admin\]/);
+  assert.match(ci, /result == "success" or \.result == "skipped"/);
+  for (const f of ["security", "repo", "supabase", "mobile", "admin"]) {
+    assert.match(read(`.github/workflows/${f}.yml`), /on:\s*\n\s*workflow_call:/, `${f}.yml is reusable`);
+  }
+});
+
+test("REPO-01 the ci-ok jq gate fails on failure or cancelled and passes on skipped", () => {
+  const gate = (needs) => {
+    try {
+      execFileSync("bash", ["-c", `echo '${JSON.stringify(needs)}' | jq -e 'all(.[]; .result == "success" or .result == "skipped")' >/dev/null`]);
+      return 0;
+    } catch (e) {
+      return e.status;
+    }
+  };
+  assert.equal(gate({ a: { result: "success" }, b: { result: "skipped" } }), 0);
+  assert.notEqual(gate({ a: { result: "success" }, b: { result: "failure" } }), 0);
+  assert.notEqual(gate({ a: { result: "cancelled" } }), 0);
 });
 
 test("REPO-03 migrations exist and a CI job replays them from scratch", () => {

@@ -1,0 +1,57 @@
+name: ci
+# Single entrypoint. Per-app workflows run only when their folders change (REPO-01);
+# `ci-ok` always runs and is the one required status check for main.
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  changes:
+    runs-on: ubuntu-24.04
+    outputs:
+      mobile: ${{ steps.diff.outputs.mobile }}
+      admin: ${{ steps.diff.outputs.admin }}
+      supabase: ${{ steps.diff.outputs.supabase }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - id: diff
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: .github/scripts/changed.sh "$BASE"
+
+  security:
+    uses: ./.github/workflows/security.yml
+  repo:
+    uses: ./.github/workflows/repo.yml
+  supabase:
+    needs: changes
+    if: needs.changes.outputs.supabase == 'true'
+    uses: ./.github/workflows/supabase.yml
+  mobile:
+    needs: changes
+    if: needs.changes.outputs.mobile == 'true'
+    uses: ./.github/workflows/mobile.yml
+  admin:
+    needs: changes
+    if: needs.changes.outputs.admin == 'true'
+    uses: ./.github/workflows/admin.yml
+
+  ci-ok:
+    name: ci-ok
+    if: always()
+    needs: [changes, security, repo, supabase, mobile, admin]
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Every workflow that ran passed (skipped counts as passing)
+        env:
+          NEEDS: ${{ toJSON(needs) }}
+        run: |
+          echo "$NEEDS" | jq -r 'to_entries[] | "\(.key): \(.value.result)"'
+          echo "$NEEDS" | jq -e 'all(.[]; .result == "success" or .result == "skipped")' >/dev/null

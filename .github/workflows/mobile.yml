@@ -1,15 +1,8 @@
 name: mobile
 on:
-  push:
-    branches: [main]
-    paths: [apps/mobile/**, packages/tokens/**, supabase/**, .github/workflows/mobile.yml]
-  pull_request:
-    paths: [apps/mobile/**, packages/tokens/**, supabase/**, .github/workflows/mobile.yml]
+  workflow_call:
 permissions:
   contents: read
-concurrency:
-  group: mobile-${{ github.ref }}
-  cancel-in-progress: true
 jobs:
   verify:
     runs-on: ubuntu-24.04

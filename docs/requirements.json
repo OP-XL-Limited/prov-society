@@ -4,7 +4,7 @@
     "title": "Per-app CI, path-filtered",
     "phase": "0",
     "status": "Done",
-    "test": "REPO-01 each app has its own path-filtered CI job",
+    "test": "REPO-01 each app's CI runs only when its folder or supabase/ changes",
     "commit": "07c53a0"
   },
   {
