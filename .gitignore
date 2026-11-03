@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.example
+.obsidian/
+node_modules/
+build/
+.dart_tool/
