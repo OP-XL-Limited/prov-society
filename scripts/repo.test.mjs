@@ -28,7 +28,7 @@ function changedFlags(paths) {
   }
   git("add", "-A");
   git("commit", "-q", "-m", "change");
-  const out = execFileSync("bash", [join(root, ".github/scripts/changed.sh"), base], { cwd: dir, encoding: "utf8" });
+  const out = execFileSync("bash", [join(root, ".github/scripts/changed.sh"), base], { cwd: dir, encoding: "utf8", env: { ...process.env, GITHUB_OUTPUT: "" } });
   return Object.fromEntries(out.trim().split("\n").map((l) => l.split("=")));
 }
 
@@ -42,7 +42,7 @@ test("REPO-01 each app's CI runs only when its folder or supabase/ changes", () 
 });
 
 test("REPO-01 a missing or zero base runs every app workflow", () => {
-  const out = execFileSync("bash", [join(root, ".github/scripts/changed.sh"), "0000000000000000000000000000000000000000"], { encoding: "utf8" });
+  const out = execFileSync("bash", [join(root, ".github/scripts/changed.sh"), "0000000000000000000000000000000000000000"], { encoding: "utf8", env: { ...process.env, GITHUB_OUTPUT: "" } });
   assert.match(out, /mobile=true[\s\S]*admin=true[\s\S]*supabase=true/);
 });
 
