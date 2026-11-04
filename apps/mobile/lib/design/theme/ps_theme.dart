@@ -13,24 +13,36 @@ class PsTheme extends InheritedWidget {
 
   PsPalette get palette => paletteOf(mode);
 
+  static PsPalette paletteOf(PsThemeMode mode) =>
+      mode == PsThemeMode.nocturne ? PsPalette.nocturne : PsPalette.atelier;
+
+  /// Builds a text style from a token spec. Fonts are variable, so weight and
+  /// (for the display serif) optical size are set as axes.
   TextStyle style(PsTextSpec spec, {Color? color}) => TextStyle(
     fontFamily: spec.family,
     fontSize: spec.size,
     height: spec.height,
     letterSpacing: spec.size * spec.tracking,
     fontWeight: FontWeight.values[(spec.weight ~/ 100) - 1],
+    fontVariations: [
+      FontVariation('wght', spec.weight.toDouble()),
+      if (spec.family == PsFonts.display)
+        FontVariation('opsz', spec.size.clamp(9, 144).toDouble()),
+    ],
     fontFeatures: spec.features,
     color: color ?? palette.vellum,
+    decoration: TextDecoration.none,
   );
-
-  static PsPalette paletteOf(PsThemeMode mode) =>
-      mode == PsThemeMode.nocturne ? PsPalette.nocturne : PsPalette.atelier;
 
   static PsTheme of(BuildContext context) {
     final theme = context.dependOnInheritedWidgetOfExactType<PsTheme>();
     assert(theme != null, 'PsTheme missing above this widget.');
     return theme!;
   }
+
+  /// True when the OS asks for reduced motion (DS-05).
+  static bool reducedMotion(BuildContext context) =>
+      MediaQuery.maybeDisableAnimationsOf(context) ?? false;
 
   @override
   bool updateShouldNotify(PsTheme oldWidget) => mode != oldWidget.mode;
