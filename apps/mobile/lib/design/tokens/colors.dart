@@ -15,6 +15,7 @@ class PsPalette {
     required this.oxblood,
     required this.resin,
     required this.onAccent,
+    required this.shadow,
     required this.hairline,
   });
 
@@ -27,6 +28,7 @@ class PsPalette {
   final Color oxblood;
   final Color resin;
   final Color onAccent;
+  final Color shadow;
   final Color hairline;
 
   static const nocturne = PsPalette(
@@ -39,6 +41,7 @@ class PsPalette {
     oxblood: Color(0xFF7A2630),
     resin: Color(0xFFB9864F),
     onAccent: Color(0xFFF2ECE1),
+    shadow: Color(0xFF000000),
     hairline: Color(0x1AECE4D6),
   );
 
@@ -52,6 +55,7 @@ class PsPalette {
     oxblood: Color(0xFF6E1F29),
     resin: Color(0xFF855A26),
     onAccent: Color(0xFFF2ECE1),
+    shadow: Color(0xFF1A1410),
     hairline: Color(0x1F0F0E0D),
   );
 }

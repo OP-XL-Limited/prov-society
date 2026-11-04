@@ -16,6 +16,7 @@ class PsTextSpec {
     required this.tracking,
     required this.weight,
     required this.features,
+    this.uppercase = false,
   });
 
   final String family;
@@ -26,6 +27,10 @@ class PsTextSpec {
   final double tracking;
   final int weight;
   final List<FontFeature> features;
+
+  /// Labels are set in uppercase with wide tracking. The fonts have no
+  /// small-caps feature, so this is the honest equivalent (SPEC 3.2).
+  final bool uppercase;
 }
 
 abstract final class PsType {
@@ -36,6 +41,7 @@ abstract final class PsType {
     tracking: -0.03,
     weight: 400,
     features: [],
+    uppercase: false,
   );
 
   static const displayL = PsTextSpec(
@@ -45,6 +51,7 @@ abstract final class PsType {
     tracking: -0.02,
     weight: 400,
     features: [],
+    uppercase: false,
   );
 
   static const titleM = PsTextSpec(
@@ -54,6 +61,7 @@ abstract final class PsType {
     tracking: -0.01,
     weight: 400,
     features: [],
+    uppercase: false,
   );
 
   static const bodyM = PsTextSpec(
@@ -63,6 +71,7 @@ abstract final class PsType {
     tracking: 0,
     weight: 400,
     features: [],
+    uppercase: false,
   );
 
   static const labelS = PsTextSpec(
@@ -71,7 +80,8 @@ abstract final class PsType {
     height: 1.3,
     tracking: 0.12,
     weight: 500,
-    features: [FontFeature.enable('smcp'), FontFeature.enable('c2sc')],
+    features: [],
+    uppercase: true,
   );
 
   static const numeralL = PsTextSpec(
@@ -81,5 +91,6 @@ abstract final class PsType {
     tracking: -0.01,
     weight: 300,
     features: [FontFeature.tabularFigures()],
+    uppercase: false,
   );
 }

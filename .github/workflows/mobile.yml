@@ -24,6 +24,10 @@ jobs:
         run: node packages/tokens/build.mjs --check
       - run: flutter pub get --enforce-lockfile
       - run: flutter gen-l10n
+      - name: Generated code is fresh (ENG-03)
+        run: |
+          dart run build_runner build --delete-conflicting-outputs
+          git diff --exit-code -- lib
       - name: Outdated report (SECX-07)
         run: flutter pub outdated
       - run: dart format --output=none --set-exit-if-changed lib test tool

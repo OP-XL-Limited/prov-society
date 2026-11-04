@@ -15,7 +15,7 @@ const argb = (hex, alpha = 1) => {
   const a = Math.round(alpha * 255).toString(16).padStart(2, '0').toUpperCase();
   return `0x${a}${hex.slice(1).toUpperCase()}`;
 };
-const names = ['ink', 'smoke', 'lacquer', 'vellum', 'ash', 'verdigris', 'oxblood', 'resin', 'onAccent'];
+const names = ['ink', 'smoke', 'lacquer', 'vellum', 'ash', 'verdigris', 'oxblood', 'resin', 'onAccent', 'shadow'];
 
 function resolveColor(theme, name) {
   const c = tokens.color[theme][name];
@@ -91,7 +91,6 @@ function dartType() {
     .map(([k, s]) => {
       const feats = [];
       if (s.tabular) feats.push("FontFeature.tabularFigures()");
-      if (s.smallCaps) feats.push("FontFeature.enable('smcp')", "FontFeature.enable('c2sc')");
       return `  static const ${k} = PsTextSpec(
     family: PsFonts.${s.family},
     size: ${s.size},
@@ -99,6 +98,7 @@ function dartType() {
     tracking: ${s.tracking},
     weight: ${s.weight},
     features: [${feats.join(', ')}],
+    uppercase: ${s.uppercase ? 'true' : 'false'},
   );`;
     })
     .join('\n\n');
@@ -120,6 +120,7 @@ class PsTextSpec {
     required this.tracking,
     required this.weight,
     required this.features,
+    this.uppercase = false,
   });
 
   final String family;
@@ -130,6 +131,10 @@ class PsTextSpec {
   final double tracking;
   final int weight;
   final List<FontFeature> features;
+
+  /// Labels are set in uppercase with wide tracking. The fonts have no
+  /// small-caps feature, so this is the honest equivalent (SPEC 3.2).
+  final bool uppercase;
 }
 
 abstract final class PsType {

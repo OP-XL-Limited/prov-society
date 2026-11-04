@@ -100,11 +100,125 @@ abstract class AppLocalizations {
   /// **'Provenance Society'**
   String get appName;
 
-  /// Quiet line shown on the first launch screen.
+  /// Bottom bar label.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get tabToday;
+
+  /// No description provided for @tabVault.
+  ///
+  /// In en, this message translates to:
+  /// **'Vault'**
+  String get tabVault;
+
+  /// No description provided for @tabSociety.
+  ///
+  /// In en, this message translates to:
+  /// **'Society'**
+  String get tabSociety;
+
+  /// No description provided for @tabWanted.
+  ///
+  /// In en, this message translates to:
+  /// **'Wanted'**
+  String get tabWanted;
+
+  /// No description provided for @tabMe.
+  ///
+  /// In en, this message translates to:
+  /// **'Me'**
+  String get tabMe;
+
+  /// No description provided for @todayLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get todayLabel;
+
+  /// No description provided for @todayTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing worn yet.'**
+  String get todayTitle;
+
+  /// No description provided for @todayBody.
+  ///
+  /// In en, this message translates to:
+  /// **'The morning\'s choice will be set here once your Vault holds a bottle.'**
+  String get todayBody;
+
+  /// No description provided for @vaultLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'The Vault'**
+  String get vaultLabel;
+
+  /// No description provided for @vaultTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'The shelves are empty.'**
+  String get vaultTitle;
+
+  /// No description provided for @vaultBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Bottles you add are kept here, private by default.'**
+  String get vaultBody;
+
+  /// No description provided for @societyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'The Society'**
+  String get societyLabel;
+
+  /// No description provided for @societyTitle.
   ///
   /// In en, this message translates to:
   /// **'Membership by invitation.'**
-  String get bootTagline;
+  String get societyTitle;
+
+  /// No description provided for @societyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Exhibitions and recognitions appear here for members.'**
+  String get societyBody;
+
+  /// No description provided for @wantedLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Wanted'**
+  String get wantedLabel;
+
+  /// No description provided for @wantedTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing sought.'**
+  String get wantedTitle;
+
+  /// No description provided for @wantedBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Bottles you are looking for are listed here, with a note when one is verified.'**
+  String get wantedBody;
+
+  /// No description provided for @meLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Member'**
+  String get meLabel;
+
+  /// No description provided for @meTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile is sealed.'**
+  String get meTitle;
+
+  /// No description provided for @meBody.
+  ///
+  /// In en, this message translates to:
+  /// **'What others may see is yours to decide.'**
+  String get meBody;
 }
 
 class _AppLocalizationsDelegate

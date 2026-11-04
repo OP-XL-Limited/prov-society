@@ -9,6 +9,7 @@
   --ps-oxblood: #7A2630;
   --ps-resin: #B9864F;
   --ps-onAccent: #F2ECE1;
+  --ps-shadow: #000000;
   --ps-hairline: rgb(236 228 214 / 0.1);
 }
 
@@ -22,6 +23,7 @@
   --ps-oxblood: #6E1F29;
   --ps-resin: #855A26;
   --ps-onAccent: #F2ECE1;
+  --ps-shadow: #1A1410;
   --ps-hairline: rgb(15 14 13 / 0.12);
 }
 
@@ -35,6 +37,7 @@
   --color-oxblood: var(--ps-oxblood);
   --color-resin: var(--ps-resin);
   --color-onAccent: var(--ps-onAccent);
+  --color-shadow: var(--ps-shadow);
   --color-hairline: var(--ps-hairline);
   --font-display: "Fraunces", Georgia, serif;
   --font-text: "Inter Tight", system-ui, sans-serif;

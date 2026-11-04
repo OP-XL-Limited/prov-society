@@ -155,49 +155,49 @@
     "id": "DS-02",
     "title": "Two themes",
     "phase": "1",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "DS-02 each theme paints its own ink ground",
+    "commit": "PR #2"
   },
   {
     "id": "DS-04",
     "title": "3D icons via AppIcon",
     "phase": "1",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "DS-04 the required icon set of 17 is defined",
+    "commit": "PR #2"
   },
   {
     "id": "DS-05",
     "title": "Reduced motion",
     "phase": "1",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "DS-05 reduced motion turns the drawer into a crossfade",
+    "commit": "PR #2"
   },
   {
     "id": "NAV-01",
     "title": "Custom tab bar",
     "phase": "1",
-    "status": "Not started",
-    "test": "",
-    "commit": ""
+    "status": "Done",
+    "test": "NAV-01 shows five tabs in order",
+    "commit": "PR #2"
   },
   {
     "id": "ENG-04",
     "title": "Platform guidelines for system behaviour",
     "phase": "1",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "PR #2"
   },
   {
     "id": "ENG-05",
     "title": "WCAG 2.2 AA, 44 pt targets, labels",
     "phase": "1",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "PR #2"
   },
   {
     "id": "ENG-06",
@@ -211,9 +211,9 @@
     "id": "PSY-01",
     "title": "Discretion is the luxury",
     "phase": "1",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "PR #2"
   },
   {
     "id": "PSY-02",
@@ -243,9 +243,9 @@
     "id": "PSY-05",
     "title": "Ritual over habit loops",
     "phase": "1",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "PR #2"
   },
   {
     "id": "PSY-06",
@@ -259,17 +259,17 @@
     "id": "PSY-07",
     "title": "The object is the hero",
     "phase": "1",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "PR #2"
   },
   {
     "id": "PSY-08",
     "title": "Language of the house",
     "phase": "1",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "PR #2"
   },
   {
     "id": "PSY-09",
@@ -283,17 +283,17 @@
     "id": "PSY-15",
     "title": "Anti-patterns fail review",
     "phase": "1",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "PR #2"
   },
   {
     "id": "PSY-16",
     "title": "Per-screen principle note",
     "phase": "1",
-    "status": "Not started",
+    "status": "Partial",
     "test": "",
-    "commit": ""
+    "commit": "PR #2"
   },
   {
     "id": "VAULT-01",

@@ -2,6 +2,31 @@
   "@@locale": "en",
   "appName": "Provenance Society",
   "@appName": { "description": "Name of the app, shown in the OS app switcher." },
-  "bootTagline": "Membership by invitation.",
-  "@bootTagline": { "description": "Quiet line shown on the first launch screen." }
+
+  "tabToday": "Today",
+  "tabVault": "Vault",
+  "tabSociety": "Society",
+  "tabWanted": "Wanted",
+  "tabMe": "Me",
+  "@tabToday": { "description": "Bottom bar label." },
+
+  "todayLabel": "Today",
+  "todayTitle": "Nothing worn yet.",
+  "todayBody": "The morning's choice will be set here once your Vault holds a bottle.",
+
+  "vaultLabel": "The Vault",
+  "vaultTitle": "The shelves are empty.",
+  "vaultBody": "Bottles you add are kept here, private by default.",
+
+  "societyLabel": "The Society",
+  "societyTitle": "Membership by invitation.",
+  "societyBody": "Exhibitions and recognitions appear here for members.",
+
+  "wantedLabel": "Wanted",
+  "wantedTitle": "Nothing sought.",
+  "wantedBody": "Bottles you are looking for are listed here, with a note when one is verified.",
+
+  "meLabel": "Member",
+  "meTitle": "Your profile is sealed.",
+  "meBody": "What others may see is yours to decide."
 }
